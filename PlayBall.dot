@@ -1,0 +1,62 @@
+
+    digraph textX {
+    fontname = "Bitstream Vera Sans"
+    fontsize = 8
+    node[
+        shape=record,
+        style=filled,
+        fillcolor=aliceblue
+    ]
+    nodesep = 0.3
+    edge[dir=black,arrowtail=empty]
+
+
+2935325001248[ label="{Program|}"]
+
+2935325006208[ label="{*Statements|}"]
+
+2935325023072[ label="{AssignmentStatement|var: ID\lexpr: Expression\l}"]
+
+2935325013152[ label="{PrintStatement|expr: Expression\l}"]
+
+2935325029024[ label="{DeleteStatement|var: ID\l}"]
+
+2935325011168[ label="{LoopStatement|expr1: Expression\lexpr2: Expression\l}"]
+
+2935325025056[ label="{MathStatement|var1: ID\lexpr1: Expression\loperator: Operator\lexpr2: Expression\l}"]
+
+2935325032992[ label="{IfStatement|expr1: Expression\leqoperator: EqualityOperator\lexpr2: Expression\l}"]
+
+2935325033984[ label="{NegateIfStatement|expr1: Expression\l}"]
+
+2935325037952[ label="{ValidateIfStatement|expr1: Expression\l}"]
+
+
+
+2935325001248 -> 2935325006208[arrowtail=diamond, dir=both, headlabel="statements 0..*"]
+2935325006208 -> 2935325023072 [dir=back]
+2935325006208 -> 2935325013152 [dir=back]
+2935325006208 -> 2935325029024 [dir=back]
+2935325006208 -> 2935325011168 [dir=back]
+2935325006208 -> 2935325025056 [dir=back]
+2935325006208 -> 2935325032992 [dir=back]
+2935325006208 -> 2935325033984 [dir=back]
+2935325006208 -> 2935325037952 [dir=back]
+2935325011168 -> 2935325006208[arrowtail=diamond, dir=both, headlabel="statements 0..*"]
+2935325032992 -> 2935325006208[arrowtail=diamond, dir=both, headlabel="statements 0..*"]
+2935325033984 -> 2935325006208[arrowtail=diamond, dir=both, headlabel="statements 0..*"]
+2935325037952 -> 2935325006208[arrowtail=diamond, dir=both, headlabel="statements 0..*"]
+match_rules [ shape=plaintext, label=< <table>
+	<tr>
+		<td><b>EqualityOperator</b></td><td>==|&lt;|&lt;=|&gt;|&gt;=|!=</td>
+	</tr>
+	<tr>
+		<td><b>Expression</b></td><td>NUMBER|FLOAT|BOOL|ID|STRING</td>
+	</tr>
+	<tr>
+		<td><b>Operator</b></td><td>+|-|*|/|%|^</td>
+	</tr>
+</table> >]
+
+
+}

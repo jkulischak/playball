@@ -1,0 +1,16 @@
+PlayBall
+Player MyScore is 5
+Player YourScore is 4
+If MyScore > YourScore
+Run Scored By "I Win!!!"
+EndIf
+If MyScore < YourScore
+Run Scored By "Do not output"
+EndIf
+If 11 > MyScore
+Run Scored By "i lost :/"
+EndIf
+If MyScore == 5
+Run Scored By "Tie Game"
+EndIf
+Thats The Game!

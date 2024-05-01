@@ -1,0 +1,18 @@
+PlayBall
+Player X is 5
+Player Y is 3
+Run Scored By X
+Run Scored By Y
+Compute ADD = X + Y
+Run Scored By ADD
+Compute SUB = X - Y
+Run Scored By SUB
+Compute MULT = X * Y
+Run Scored By MULT
+Compute DIV = X / Y
+Run Scored By DIV
+Compute MOD = X % Y
+Run Scored By MOD
+Compute EXP = X ^ Y
+Run Scored By EXP
+Thats The Game!

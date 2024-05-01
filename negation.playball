@@ -1,0 +1,27 @@
+PlayBall
+If !False
+Run Scored By "Negation"
+EndIf
+If !OUT
+Run Scored By "Negation"
+EndIf
+If !True
+Run Scored By "Do not ouput !True"
+EndIf
+If !SAFE
+Run Scored By "Do not ouput !SAFE"
+EndIf
+
+If SAFE
+Run Scored By "Validation"
+EndIf
+If True
+Run Scored By "Validation"
+EndIf
+If False
+Run Scored By "Do not ouput False"
+EndIf
+If OUT
+Run Scored By "Do not output OUT"
+EndIf
+Thats The Game!

@@ -1,0 +1,61 @@
+Program:
+    'PlayBall'
+        statements*=Statements
+    'Thats The Game!'
+;
+
+Statements:
+    AssignmentStatement | PrintStatement | DeleteStatement | LoopStatement | MathStatement | IfStatement | NegateIfStatement | ValidateIfStatement
+;
+
+AssignmentStatement:
+    'Player' var=ID 'is' expr=Expression
+;
+
+PrintStatement:
+    'Run Scored By' expr=Expression
+;
+
+DeleteStatement:
+    'Strikeout' var=ID
+;
+
+LoopStatement:
+    'Running From' expr1=Expression 'to' expr2=Expression
+    (statements*=Statements)
+    'Runner Safe'
+;
+
+MathStatement:
+    'Compute' var1=ID '=' expr1=Expression operator=Operator expr2=Expression
+;
+
+IfStatement:
+    'If' expr1=Expression eqoperator=EqualityOperator expr2=Expression 
+    (statements*=Statements)
+    'EndIf'      
+;
+
+NegateIfStatement: 
+    'If !' expr1=Expression
+    (statements*=Statements)
+    'EndIf'
+;
+
+ValidateIfStatement:
+    'If' expr1=Expression
+    (statements*=Statements)
+    'EndIf'
+;    
+
+Operator:
+    '+' | '-' | '*' | '/' | '%' | '^'
+;
+
+EqualityOperator:
+    '==' | '<' | '<=' | '>' | '>=' | '!='
+;
+
+Expression: 
+    BASETYPE
+;

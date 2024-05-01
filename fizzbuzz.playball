@@ -1,0 +1,30 @@
+PlayBall
+Player Score is 0
+Player Three is 1
+Player Five is 1
+Player Fifteen is 1
+Running From 1 to 32
+Compute Score = Score + 1
+Compute Three = Score % 3
+Compute Five = Score % 5
+Compute Fifteen = Score % 15
+If Three == 0
+If Fifteen != 0
+Run Scored By "Fizz"
+EndIf
+EndIf
+If Five == 0
+If Fifteen != 0
+Run Scored By "Buzz"
+EndIf
+EndIf
+If Fifteen == 0
+Run Scored By "FizzBuzz"
+EndIf
+If Three != 0
+If Five != 0
+Run Scored By Score
+EndIf
+EndIf
+Runner Safe
+Thats The Game!
